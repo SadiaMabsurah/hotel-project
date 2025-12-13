@@ -17,7 +17,7 @@ class AdminController extends Controller
             $usertype = Auth()->user()->usertype;
             if($usertype=='user')
             {
-                return view('dashboard');
+                return view('home.index');
             }
             else if($usertype=='admin')
             {
@@ -28,5 +28,10 @@ class AdminController extends Controller
                 return redirect()->back();
             }
         }
+    }
+
+    public function home()
+    {
+        return view('home.index');
     }
 }
