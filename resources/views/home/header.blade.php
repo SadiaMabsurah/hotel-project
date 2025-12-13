@@ -36,6 +36,13 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="contact.html">Contact Us</a>
                               </li>
+                                 <li class="nav-item">
+                                 <a class="nav-link" href="contact.html">Login</a>
+                              </li>
+                                <li class="nav-item">
+                                 <a class="nav-link" href="contact.html">Register</a>
+                              </li>
+                              
                            </ul>
                         </div>
                     </nav>
