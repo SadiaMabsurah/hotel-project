@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\AdminController;
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -17,5 +15,3 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-
-route::get('/home',[AdminController::class,'index']);
