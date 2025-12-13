@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-
-    @include('home.css') 
-
+      @include('home.css')
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -13,8 +11,8 @@
       </div>
       <!-- end loader -->
       <!-- header -->
-      <header>
-         @include('home.header')
+       <header>
+      @include('home.header')
       </header>
       <!-- end header inner -->
       <!-- end header -->
@@ -34,7 +32,7 @@
       @include('home.blog')
       <!-- end blog -->
       <!--  contact -->
-      @include('home.contact')
+       @include('home.contact')
       <!-- end contact -->
       <!--  footer -->
       @include('home.footer')
