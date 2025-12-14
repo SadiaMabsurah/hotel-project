@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 
 route::get('/',[AdminController::class,'home']);
 
@@ -19,3 +20,6 @@ Route::get('/update_room/{id}', [AdminController::class, 'update_room']);
 
 Route::post('/edit_room/{id}', [AdminController::class, 'edit_room']);
 
+Route::get('/room_details/{id}', [HomeController::class, 'room_details']);
+
+Route::post('/book_room/{id}', [HomeController::class, 'book_room']);
