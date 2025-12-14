@@ -33,6 +33,7 @@
                                         <th>Wifi</th>
                                         <th>Room Type</th>
                                         <th>Image</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
 
@@ -48,10 +49,19 @@
                                             <img src="{{ asset('room/'.$room->image) }}"
                                                  style="width:80px; height:60px; object-fit:cover;">
                                         </td>
+                                        <td>
+                                            <!-- Delete Button -->
+                                            <form action="{{ url('delete_room', $room->id) }}" method="POST" 
+                                                  onsubmit="return confirm('Are you sure you want to delete this room?');">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                            </form>
+                                        </td>
                                     </tr>
                                     @empty
                                     <tr>
-                                        <td colspan="6" class="text-center">
+                                        <td colspan="7" class="text-center">
                                             No rooms found
                                         </td>
                                     </tr>
