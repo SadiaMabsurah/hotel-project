@@ -84,4 +84,27 @@ public function update_room($id)
     return view('admin.update_room',compact('data'));
 }
 
+public function edit_room(Request $request, $id)
+{
+   
+    $room = Room::find($id);
+
+    $room->room_title = $request->input('title');
+    $room->description = $request->input('description');
+    $room->price = $request->input('price');
+    $room->wifi = $request->input('wifi');
+    $room->room_type = $request->input('type');
+
+    if ($request->hasFile('image')) {
+        $file = $request->file('image');
+        $filename = time() . '_' . $file->getClientOriginalName();
+        $file->move(public_path('room'), $filename);
+        $room->image = $filename;
+    }
+
+    $room->save();
+
+    return redirect('/view_room')->with('success', 'Room updated successfully!');
+}
+
 }
