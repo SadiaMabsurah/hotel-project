@@ -129,15 +129,11 @@
                 </div>
               </div>
             </div>
-            <!-- Megamenu end     -->
-            
-            
-            <!-- Log out               -->
+            <!-- Megamenu end-->
+            <!-- Log out-->
             <div class="list-inline-item logout">
                 <x-app-layout>
-    
                 </x-app-layout> 
-
             </div>
           </div>
         </div>
