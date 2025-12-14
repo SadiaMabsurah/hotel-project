@@ -68,4 +68,11 @@ public function view_room()
         $data = Room::all();
         return view('admin.view_room',compact('data'));
     }
+    
+    public function delete_room($id)
+    {
+        $data=Room::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
 }
