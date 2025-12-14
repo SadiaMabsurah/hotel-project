@@ -63,4 +63,8 @@ class AdminController extends Controller
     return redirect()->back()->with('success', 'Room added successfully!');
 }
 
+public function view_room()
+    {
+        return view('admin.view_room');
+    }
 }
