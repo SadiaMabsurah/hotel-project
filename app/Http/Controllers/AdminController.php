@@ -75,4 +75,13 @@ public function view_room()
         $data->delete();
         return redirect()->back();
     }
+
+
+public function update_room($id)
+{
+
+    $data= Room::find($id);
+    return view('admin.update_room',compact('data'));
+}
+
 }
