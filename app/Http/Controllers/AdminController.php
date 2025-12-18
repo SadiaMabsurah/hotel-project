@@ -117,4 +117,14 @@ public function bookings()
     return view('admin.booking', compact('data'));
 }
 
+public function delete_booking($id)
+{
+    $booking = Booking::find($id);
+    if ($booking) {
+        $booking->delete();
+    }
+    return redirect()->back();
+
+}
+
 }
