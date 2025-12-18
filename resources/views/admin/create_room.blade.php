@@ -38,9 +38,10 @@
                   <div class="form-group mb-2">
                       <label for="roomType">Room Type</label>
                       <select name="type" id="roomType" class="form-control">
-                          <option selected value="regular">Regular</option>
-                          <option value="premium">Premium</option>
-                          <option value="deluxe">Deluxe</option>
+                        <option selected value="regular">Regular</option>
+                        <option value="premium">Premium</option>
+                        <option value="deluxe">Deluxe</option>
+                        <option value="luxury">Luxury</option>
                       </select>  
                   </div>
 
