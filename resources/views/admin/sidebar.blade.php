@@ -40,5 +40,12 @@
                 </li>
             </ul>
         </li>
+
+        <li class="{{ request()->is('/') ? 'active' : '' }}">
+            <a href="{{ url('bookings') }}">
+                <i class="icon-home"></i> Bookings
+            </a>
+        </li>
+        
     </ul>
 </nav>

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>View Rooms</title>
+
     @include('admin.css')
+
+    <style></style>
 </head>
 <body>
 
