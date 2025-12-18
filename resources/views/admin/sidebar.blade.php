@@ -5,8 +5,8 @@
             <img src="admin/img/avatar-6.jpg" alt="..." class="img-fluid rounded-circle">
         </div>
         <div class="title">
-            <h1 class="h5">Mark Stephen</h1>
-            <p>Web Designer</p>
+            <h1 class="h5">SaFa</h1>
+            <p>Admin</p>
         </div>
     </div>
 
@@ -21,8 +21,11 @@
         </li>
 
         <li class="{{ request()->is('create_room','view_room') ? 'active' : '' }}">
-            <a href="#exampledropdownDropdown"
+            <a href="#" 
+               role="button"
                data-toggle="collapse"
+               data-target="#exampledropdownDropdown"
+               aria-controls="exampledropdownDropdown"
                aria-expanded="{{ request()->is('create_room','view_room') ? 'true' : 'false' }}">
                 <i class="icon-windows"></i> Hotel Rooms
             </a>
