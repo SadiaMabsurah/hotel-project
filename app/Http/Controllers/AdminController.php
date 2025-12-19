@@ -12,6 +12,8 @@ use App\Models\Room;
 
 use App\Models\Booking;
 
+use App\Models\Gallary;
+
 class AdminController extends Controller
 {
     public function index()
@@ -38,7 +40,8 @@ class AdminController extends Controller
     public function home()
     {
         $room = Room::all();
-        return view('home.index',compact('room'));
+        $gallary = Gallary::all();
+        return view('home.index',compact('room', 'gallary'));
     }
 
     public function create_room()
@@ -146,5 +149,39 @@ public function reject_booking($id)
     }
     return redirect()->back();
 }
+
+public function view_gallary()
+{
+    $gallary = Gallary::all();
+    return view('admin.gallary', compact('gallary'));
+}
+
+public function upload_gallary(Request $request)
+{
+
+    $data = new Gallary;
+
+    $image = $request->image;
+    if ($image) {
+        $imagename = time() . '.' . $image->getClientOriginalExtension();
+        $request->image->move('gallary', $imagename);
+        $data->image = $imagename;
+
+        $data->save();
+
+    return redirect()->back();
+    }
+
+    
+}
+
+
+public function delete_gallary($id)
+{
+    $gallary = Gallary::find($id);
+    $gallary->delete();
+    return redirect()->back();
+}
+
 
 }
