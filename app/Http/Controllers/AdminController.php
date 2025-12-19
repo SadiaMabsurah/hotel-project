@@ -127,4 +127,24 @@ public function delete_booking($id)
 
 }
 
+public function approve_booking($id)
+{
+    $booking = Booking::find($id);
+    if ($booking) {
+        $booking->status = 'Approved';
+        $booking->save();
+    }
+    return redirect()->back();
+}
+
+public function reject_booking($id)
+{
+    $booking = Booking::find($id);
+    if ($booking) {
+        $booking->status = 'Rejected';
+        $booking->save();
+    }
+    return redirect()->back();
+}
+
 }
