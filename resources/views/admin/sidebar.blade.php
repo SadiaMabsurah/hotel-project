@@ -32,5 +32,12 @@
                 <i class="icon-grid"></i> Bookings
             </a>
         </li>
+
+        <li class="{{ request()->is('gallary') ? 'active' : '' }}">
+            <a href="{{ url('view_gallary') }}">
+                <i class="icon-grid"></i> Gallary
+            </a>
+        </li>
+
     </ul>
 </nav>
