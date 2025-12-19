@@ -9,7 +9,8 @@
                     <div class="center-desk">
                         <div class="logo">
                             <a href="{{ url('/') }}">
-                                <img src="images/logo.png" alt="Logo" />
+                                <img src="images/Safa-logo-transparent.png" alt="Logo" class="logo-img">
+
                             </a>
                         </div>
                     </div>
