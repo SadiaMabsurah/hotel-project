@@ -8,13 +8,12 @@
     </x-slot>
 
     <x-slot name="content">
-        <div class="max-w-xl text-sm text-gray-600">
+        <div class="max-w-xl text-sm text-gray-600 mb-4">
             {{ __('If necessary, you may log out of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.') }}
         </div>
 
         @if (count($this->sessions) > 0)
             <div class="mt-5 space-y-6">
-                <!-- Other Browser Sessions -->
                 @foreach ($this->sessions as $session)
                     <div class="flex items-center">
                         <div>
@@ -31,13 +30,12 @@
 
                         <div class="ms-3">
                             <div class="text-sm text-gray-600">
-                                {{ $session->agent->platform() ? $session->agent->platform() : __('Unknown') }} - {{ $session->agent->browser() ? $session->agent->browser() : __('Unknown') }}
+                                {{ $session->agent->platform() ?? __('Unknown') }} - {{ $session->agent->browser() ?? __('Unknown') }}
                             </div>
 
                             <div>
                                 <div class="text-xs text-gray-500">
                                     {{ $session->ip_address }},
-
                                     @if ($session->is_current_device)
                                         <span class="text-green-500 font-semibold">{{ __('This device') }}</span>
                                     @else
@@ -52,7 +50,7 @@
         @endif
 
         <div class="flex items-center mt-5">
-            <x-button wire:click="confirmLogout" wire:loading.attr="disabled">
+            <x-button class="ms-4" wire:click="confirmLogout" wire:loading.attr="disabled">
                 {{ __('Log Out Other Browser Sessions') }}
             </x-button>
 
@@ -72,11 +70,15 @@
 
                 <div class="mt-4" x-data="{}" x-on:confirming-logout-other-browser-sessions.window="setTimeout(() => $refs.password.focus(), 250)">
                     <x-input type="password" class="mt-1 block w-3/4"
-                                autocomplete="current-password"
-                                placeholder="{{ __('Password') }}"
-                                x-ref="password"
-                                wire:model="password"
-                                wire:keydown.enter="logoutOtherBrowserSessions" />
+                             autocomplete="current-password"
+                             placeholder="{{ __('Password') }}"
+                             x-ref="password"
+                             wire:model="password"
+                             wire:keydown.enter="logoutOtherBrowserSessions"
+                             style="border-radius:10px; border:1px solid #ccc; padding:10px 12px; transition: border-color 0.3s ease, box-shadow 0.3s ease;"
+                             onfocus="this.style.borderColor='#e63946'; this.style.boxShadow='0 0 5px rgba(230,57,70,0.3)';"
+                             onblur="this.style.borderColor='#ccc'; this.style.boxShadow='none';"
+                    />
 
                     <x-input-error for="password" class="mt-2" />
                 </div>
@@ -88,8 +90,11 @@
                 </x-secondary-button>
 
                 <x-button class="ms-3"
-                            wire:click="logoutOtherBrowserSessions"
-                            wire:loading.attr="disabled">
+                          wire:click="logoutOtherBrowserSessions"
+                          wire:loading.attr="disabled"
+                          style="background-color:#e63946; color:white; font-weight:bold; border-radius:10px; padding:10px 20px; transition:background-color 0.3s ease, transform 0.2s ease;"
+                          onmouseover="this.style.backgroundColor='#d62828';"
+                          onmouseout="this.style.backgroundColor='#e63946';">
                     {{ __('Log Out Other Browser Sessions') }}
                 </x-button>
             </x-slot>
