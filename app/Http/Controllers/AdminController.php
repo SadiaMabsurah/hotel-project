@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\Room;
 
+use App\Models\Booking;
+
 class AdminController extends Controller
 {
     public function index()
@@ -107,6 +109,42 @@ public function edit_room(Request $request, $id)
     $room->save();
 
     return redirect('/view_room')->with('success', 'Room updated successfully!');
+}
+
+public function bookings()
+{
+    $data = Booking::all();
+    return view('admin.booking', compact('data'));
+}
+
+public function delete_booking($id)
+{
+    $booking = Booking::find($id);
+    if ($booking) {
+        $booking->delete();
+    }
+    return redirect()->back();
+
+}
+
+public function approve_booking($id)
+{
+    $booking = Booking::find($id);
+    if ($booking) {
+        $booking->status = 'Approved';
+        $booking->save();
+    }
+    return redirect()->back();
+}
+
+public function reject_booking($id)
+{
+    $booking = Booking::find($id);
+    if ($booking) {
+        $booking->status = 'Rejected';
+        $booking->save();
+    }
+    return redirect()->back();
 }
 
 }

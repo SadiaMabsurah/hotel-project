@@ -39,6 +39,7 @@
                       <option value="regular" {{ $data->room_type == 'regular' ? 'selected' : '' }}>Regular</option>
                       <option value="premium" {{ $data->room_type == 'premium' ? 'selected' : '' }}>Premium</option>
                       <option value="deluxe" {{ $data->room_type == 'deluxe' ? 'selected' : '' }}>Deluxe</option>
+                      <option value="luxury" {{ $data->room_type == 'luxury' ? 'selected' : '' }}>Luxury</option>
                   </select>  
               </div>
 

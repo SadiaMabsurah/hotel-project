@@ -23,3 +23,11 @@ Route::post('/edit_room/{id}', [AdminController::class, 'edit_room']);
 Route::get('/room_details/{id}', [HomeController::class, 'room_details']);
 
 Route::post('/book_room/{id}', [HomeController::class, 'book_room']);
+
+Route::get('/bookings', [AdminController::class, 'bookings']);
+
+Route::post('/delete_booking/{id}', [AdminController::class, 'delete_booking']);
+
+Route::get('/approve_booking/{id}', [AdminController::class, 'approve_booking']);
+
+Route::get('/reject_booking/{id}', [AdminController::class, 'reject_booking']);

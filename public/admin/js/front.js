@@ -96,6 +96,30 @@ $(function () {
         $('.search-panel').fadeOut(100);
     });
 
+    // ------------------------------------------------------- //
+    // Sidebar collapse toggles (fix auto-close)
+    // Intercept clicks on collapse toggles inside #sidebar, prevent default
+    // navigation and use Bootstrap's collapse API so the menu doesn't auto-close.
+    // ------------------------------------------------------- //
+    $('#sidebar').on('click', '[data-toggle="collapse"]', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $this = $(this);
+        var target = $this.attr('data-target') || $this.attr('href');
+        if (!target) return;
+        var $target = $(target);
+        if ($target.length) {
+            // Explicitly show/hide to avoid double-toggle from Bootstrap's data-api
+            if ($target.hasClass('show')) {
+                $target.collapse('hide');
+                $this.attr('aria-expanded', 'false');
+            } else {
+                $target.collapse('show');
+                $this.attr('aria-expanded', 'true');
+            }
+        }
+    });
+
 
     // ------------------------------------------------------- //
     // Sidebar Functionality
