@@ -15,7 +15,7 @@
 
           <center>
           <h1 style="font-size: 40px; font-weight:bold;color:white;">
-            Gallary
+            Gallery
           </h1>
 
           <div class="row">
