@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <base href="/public">
     @include('admin.css')
 
     <style>
@@ -72,11 +73,11 @@
             <div class="card message-card">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h3 class="h5 mb-0 text-white">
-                        <i class="fa fa-envelope me-2"></i>Messages
+                        <i class="fa fa-envelope me-2"></i>Reply Messages
                     </h3>
 
                     <span class="message-count text-white">
-                        {{ $messages->count() }} Messages
+                        {{ $messages->count() }} Reply Messages
                     </span>
                 </div>
 
@@ -90,6 +91,7 @@
                                         <th>Email</th>
                                         <th>Phone</th>
                                         <th class="text-start">Message</th>
+                                        <th>Send Email</th>
                                     </tr>
                                 </thead>
 
@@ -102,6 +104,12 @@
                                             <td class="text-start">
                                                 {{ $message->message }}
                                             </td>
+
+                                            <!-- reply users via email -->
+                                            <td>
+                                                <a href="{{ url('/send_email/'.$message->id) }}" class="btn btn-success btn-sm">
+                                                    <i class="fa fa-reply me-1"></i> Reply
+                                                </a>
                                         </tr>
                                     @endforeach
                                 </tbody>
