@@ -1,12 +1,12 @@
-<h1 align="center">🏨 SaFa | Laravel Hotel Management System</h1>
-
-<hr>
-
 <h2>👥 Group Members</h2>
 <ul>
   <li><strong>Sadia Mabsurah – ID: 232-134-002</strong></li>
   <li><strong>Fawzia Fardowsi Tahia – ID: 232-134-004</strong></li>
 </ul>
+
+<h1 align="center">🏨 SaFa | Laravel Hotel Management System</h1>
+
+<hr>
 
 <p>
 SaFa is a sophisticated, full-stack hospitality solution engineered with Laravel 12. This platform provides a seamless bridge between a premium guest-facing interface and a high-performance administrative command center. Designed for efficiency and scalability, SaFa automates the entire lifecycle of hotel reservations, inventory management, and guest communication.
