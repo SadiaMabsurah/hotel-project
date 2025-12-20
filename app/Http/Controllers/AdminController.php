@@ -14,6 +14,9 @@ use App\Models\Booking;
 
 use App\Models\Gallary;
 
+use App\Models\Contact;
+
+
 class AdminController extends Controller
 {
     public function index()
@@ -184,5 +187,10 @@ public function delete_gallary($id)
     return redirect()->back();
 }
 
-
+public function all_messages()
+{
+    $messages = Contact::all();
+    return view('admin.all_messages', compact('messages'));
 }
+}
+
