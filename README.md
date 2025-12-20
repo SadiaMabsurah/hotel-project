@@ -109,7 +109,8 @@ SaFa is a sophisticated, full-stack hospitality solution engineered with Laravel
 
 <h2>⚙️ Installation &amp; Setup</h2>
 
-<h3>Clone &amp; Install</h3>
+<h3>Step 1: Clone &amp; Install Dependencies</h3>
+<p>Clone the repository and install PHP and Node.js dependencies.</p>
 <pre>
 git clone https://github.com/yourusername/SaFa-Hotel-Management-System.git
 cd safa-hotel
@@ -117,21 +118,23 @@ composer install
 npm install && npm run build
 </pre>
 
-<h3>Environment Configuration</h3>
+<h3>Step 2: Environment Configuration</h3>
+<p>Configure the application environment and generate an application key.</p>
 <pre>
 cp .env.example .env
 php artisan key:generate
 </pre>
-
 <p>Update the .env file with your database credentials and SMTP email configuration.</p>
 
-<h3>Initialize Database &amp; Assets</h3>
+<h3>Step 3: Initialize Database &amp; Assets</h3>
+<p>Run database migrations and create symbolic links for file storage.</p>
 <pre>
 php artisan migrate
 php artisan storage:link
 </pre>
 
-<h3>Launch Application</h3>
+<h3>Step 4: Launch Application</h3>
+<p>Start the Laravel development server.</p>
 <pre>
 php artisan serve
 </pre>
