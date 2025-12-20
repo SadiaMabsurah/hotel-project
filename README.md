@@ -2,8 +2,8 @@
 
 <h2>👥 Group Members</h2>
 <p>
-1. Sadia Mabsurah – ID: 232-134-002<br><br>
-2. Fawzia Fardowsi Tahia – ID: 232-134-004
+1. <strong>Sadia Mabsurah – ID: 232-134-002</strong><br><br>
+2. <strong>Fawzia Fardowsi Tahia – ID: 232-134-004</strong>
 </p>
 
 <p>
