@@ -39,5 +39,12 @@
             </a>
         </li>
 
+        <!-- messages -->
+        <li class="{{ request()->is('messages') ? 'active' : '' }}">
+            <a href="{{ url('all_messages') }}">
+                <i class="icon-grid"></i> Messages
+            </a>
+        </li>
+
     </ul>
 </nav>

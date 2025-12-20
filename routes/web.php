@@ -24,7 +24,7 @@ Route::get('/room_details/{id}', [HomeController::class, 'room_details']);
 
 Route::post('/book_room/{id}', [HomeController::class, 'book_room']);
 
-Route::get('/bookings', [AdminController::class, 'bookings']);
+Route::get('/bookings', [AdminController::class, 'bookings'])->middleware('auth', 'admin');
 
 Route::post('/delete_booking/{id}', [AdminController::class, 'delete_booking']);
 
@@ -37,3 +37,20 @@ Route::get('/view_gallary', [AdminController::class, 'view_gallary']);
 Route::post('/upload_gallary', [AdminController::class, 'upload_gallary']);
 
 Route::get('/delete_gallary/{id}', [AdminController::class, 'delete_gallary']);
+
+Route::post('/contact', [HomeController::class, 'contact']);
+
+Route::get('/all_messages', [AdminController::class, 'all_messages']);
+
+Route::get('/send_email/{id}', [AdminController::class, 'send_email']);
+
+Route::post('/send_user_email/{id}', [AdminController::class, 'send_user_email']);
+
+Route::get('/our_rooms', [HomeController::class, 'our_rooms']);
+
+Route::get('/hotel_gallary', [HomeController::class, 'hotel_gallary']);
+
+Route::get('/contact_us', [HomeController::class, 'contact_us']);
+
+
+

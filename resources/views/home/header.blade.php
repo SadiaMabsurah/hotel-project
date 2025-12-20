@@ -43,15 +43,15 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="room.html">Our Room</a>
+                                <a class="nav-link" href="{{url('our_rooms')}}">Our Room</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="gallery.html">Gallery</a>
+                                <a class="nav-link" href="{{url('hotel_gallary')}}">Gallery</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact Us</a>
+                                <a class="nav-link" href="{{url('contact_us')}}">Contact Us</a>
                             </li>
 
                             {{-- AUTH SECTION --}}
