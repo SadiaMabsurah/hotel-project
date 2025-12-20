@@ -111,7 +111,7 @@ SaFa is a sophisticated, full-stack hospitality solution engineered with Laravel
 
 <h3>Clone &amp; Install</h3>
 <pre>
-git clone [https://github.com/yourusername/SaFa-Hotel-Management-System.git](https://github.com/SadiaMabsurah/SaFa-Hotel-Management-System.git)
+git clone https://github.com/SadiaMabsurah/SaFa-Hotel-Management-System.git
 cd safa-hotel
 composer install
 npm install && npm run build
