@@ -1,5 +1,5 @@
 <!-- header inner -->
-<div class="header">
+<div class="header" style="font-family: 'Georgia', serif;">
     <div class="container">
         <div class="row">
 
@@ -10,7 +10,6 @@
                         <div class="logo">
                             <a href="{{ url('/') }}">
                                 <img src="images/Safa-logo-transparent.png" alt="Logo" class="logo-img">
-
                             </a>
                         </div>
                     </div>
@@ -51,7 +50,6 @@
                                 <a class="nav-link" href="gallery.html">Gallery</a>
                             </li>
 
-
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact Us</a>
                             </li>
@@ -72,16 +70,13 @@
 
                                         <ul class="dropdown-menu dropdown-menu-end"
                                             aria-labelledby="navbarDropdown">
-
                                             <li>
                                                 <a class="dropdown-item"
                                                    href="{{ route('profile.show') }}">
                                                     Profile
                                                 </a>
                                             </li>
-
                                             <li><hr class="dropdown-divider"></li>
-
                                             <li>
                                                 <a class="dropdown-item"
                                                    href="{{ route('logout') }}"
@@ -128,5 +123,15 @@
     </div>
 </div>
 
-<!-- Bootstrap 5 JS for dropdown) -->
+<!-- Bootstrap 5 JS for dropdown -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Additional CSS for Georgia font -->
+<style>
+    .header,
+    .header .navbar-nav .nav-link,
+    .header .dropdown-menu .dropdown-item,
+    .header .btn {
+        font-family: 'Georgia', serif;
+    }
+</style>
