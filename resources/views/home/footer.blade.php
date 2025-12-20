@@ -1,4 +1,4 @@
-<footer>
+<footer style="font-family: 'Georgia', serif;">
      <div class="footer">
             <div class="container">
                <div class="row">
@@ -40,11 +40,9 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-10 offset-md-1">
-                        
                         <p>
-                        © 2025 All Rights Reserved. Design by <a href="https://html.design/"> Sadia & Fawzia</a>
+                         Designed by <a href="https://html.design/"> Sadia & Fawzia</a>
                         <br><br>
-                        
                      </div>
                   </div>
                </div>
