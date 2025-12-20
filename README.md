@@ -1,237 +1,175 @@
-# 🏨 Hotel Management System
+<h2>👥 Group Members</h2>
+<ul>
+  <li><strong>Sadia Mabsurah – ID: 232-134-002</strong></li>
+  <li><strong>Fawzia Fardowsi Tahia – ID: 232-134-004</strong></li>
+</ul>
 
-A comprehensive Laravel 12-based hotel management system with Jetstream authentication, featuring room bookings, admin dashboard, gallery management, and email notifications.
+<h1 align="center">🏨 SaFa | Laravel Hotel Management System</h1>
 
-## 📋 Features
+<hr>
 
-### 🔐 Authentication & Security
-- **Laravel Jetstream** authentication with Livewire
-- **Two-Factor Authentication (2FA)** for enhanced security
-- **Role-based Access Control** (Admin/User)
-- **Profile Management** with avatar uploads
-- **Session Management** across devices
+<p>
+SaFa is a sophisticated, full-stack hospitality solution engineered with Laravel 12. This platform provides a seamless bridge between a premium guest-facing interface and a high-performance administrative command center. Designed for efficiency and scalability, SaFa automates the entire lifecycle of hotel reservations, inventory management, and guest communication.
+</p>
 
-### 🏠 Guest Features
-- **Room Browsing** with detailed information
-- **Online Booking System** with date selection
-- **Room Categories** (Regular, Deluxe, Luxury)
-- **Contact Form** for inquiries
-- **Gallery Viewing** of hotel images
+<hr>
 
-### 👨‍💼 Admin Dashboard
-- **Room Management** (Create, Read, Update, Delete)
-- **Booking Management** (Approve/Reject bookings)
-- **Gallery Management** (Upload/Delete images)
-- **Message Handling** from contact forms
-- **Email Notifications** for booking status updates
-- **Dashboard Analytics** overview
+<h2>🚀 Key Features</h2>
 
-## 🛠️ Technology Stack
+<h3>🔐 Security &amp; Identity</h3>
+<ul>
+  <li><strong>Multi-Role Architecture:</strong> Intelligent automated redirection logic for Admin and Customer workflows.</li>
+  <li><strong>Two-Factor Authentication (2FA):</strong> Enhanced account protection via mobile authenticator app integration.</li>
+  <li><strong>Session Oversight:</strong> Monitor and remotely terminate active browser sessions across multiple devices.</li>
+  <li><strong>Comprehensive Profile Management:</strong> Update name, email, passwords, and privacy controls from a dedicated portal.</li>
+  <li><strong>Custom Admin Middleware:</strong> Robust route protection ensuring only authorized staff can access the backend.</li>
+</ul>
 
-- **Framework:** Laravel 12
-- **PHP Version:** 8.2+
-- **Authentication:** Laravel Jetstream with Livewire
-- **Database:** MySQL
-- **Frontend:** Blade Templates, Tailwind CSS, Bootstrap
-- **Build Tool:** Vite
-- **Email:** SMTP
-- **File Storage:** Laravel Storage with symbolic links
+<h3>🛌 Guest Experience</h3>
+<ul>
+  <li><strong>Modern Interface:</strong> Fully responsive HTML5/CSS3 template integrated into dynamic Laravel Blade views.</li>
+  <li><strong>Smart Booking Engine:</strong> Real-time date-selection widget allowing guests to choose check-in and check-out dates.</li>
+  <li><strong>Automatic Availability Checking:</strong> Prevents double booking by validating selected dates against existing reservations.</li>
+  <li><strong>Dynamic Room Showcases:</strong> High-quality rendering of room categories including Regular, Deluxe, and Luxury with live pricing.</li>
+  <li><strong>Room Detail Pages:</strong> Dedicated views highlighting amenities such as Free WiFi and specific bed configurations.</li>
+  <li><strong>Booking Request Submission:</strong> Guests can submit room booking requests with an initial Pending status.</li>
+  <li><strong>Contact System:</strong> Integrated portal for guests to send inquiries directly to the hotel management team.</li>
+</ul>
 
-## 📊 Database Schema
+<h3>📊 Administrative Management</h3>
+<ul>
+  <li><strong>Analytical Dashboard:</strong> Centralized overview for monitoring total clients, rooms, and booking statistics.</li>
+  <li><strong>Room Inventory CRUD:</strong> Complete management of hotel rooms including add, update, and delete operations.</li>
+  <li><strong>Booking Management:</strong> Admins can review all booking requests and update their status to Approved or Rejected.</li>
+  <li><strong>Reservation Date Validation:</strong> Ensures rooms are not assigned to overlapping bookings.</li>
+  <li><strong>Automated Notifications:</strong> SMTP-based email system sends booking confirmation or rejection emails to guests.</li>
+  <li><strong>Advanced Media Handling:</strong> Upload, display, and delete room and gallery images with automatic file system cleanup.</li>
+  <li><strong>Gallery Control:</strong> Admin tools to manage and update homepage visual assets.</li>
+  <li><strong>Guest Message Handling:</strong> View and respond to customer inquiries received through the contact form.</li>
+</ul>
 
-| Table | Purpose | Key Fields |
-|-------|---------|------------|
-| **users** | User accounts & authentication | id, name, email, usertype, two_factor_secret |
-| **rooms** | Hotel room inventory | room_title, image, description, price, wifi, room_type |
-| **bookings** | Reservation management | room_id, name, email, phone, start_date, end_date, status |
-| **gallaries** | Hotel image gallery | id, image |
-| **contacts** | Guest inquiries | id, name, email, phone, message |
-| **notifications** | System notifications | id, type, notifiable_id, data |
+<hr>
 
-## ⚙️ Installation & Setup
+<h2>📊 Technical Architecture</h2>
 
-### Prerequisites
-- PHP 8.2 or higher
-- Composer
-- Node.js & npm
-- MySQL database
-- XAMPP/WAMP or similar web server
+<h3>Database Schema</h3>
+<p>The system uses a relational MySQL database to ensure data consistency and integrity.</p>
 
-### Step 1: Clone & Install Dependencies
-```bash
-git clone <repository-url>
-cd hotel-project
+<table border="1" cellpadding="10" cellspacing="0" width="100%">
+  <tr>
+    <th align="left">Table</th>
+    <th align="left">Purpose</th>
+    <th align="left">Core Attributes</th>
+  </tr>
+  <tr>
+    <td>Users</td>
+    <td>Identity &amp; Access</td>
+    <td>id, name, email, usertype, two_factor_secret</td>
+  </tr>
+  <tr>
+    <td>Rooms</td>
+    <td>Inventory</td>
+    <td>room_title, image, price, room_type, wifi</td>
+  </tr>
+  <tr>
+    <td>Bookings</td>
+    <td>Reservations</td>
+    <td>user_id, room_id, start_date, end_date, status</td>
+  </tr>
+  <tr>
+    <td>Galleries</td>
+    <td>Media Assets</td>
+    <td>id, image</td>
+  </tr>
+  <tr>
+    <td>Notification</td>
+    <td>System Alerts</td>
+    <td>id, type, notifiable_id, data</td>
+  </tr>
+  <tr>
+    <td>Contacts</td>
+    <td>Guest Messages</td>
+    <td>id, name, email, phone, message</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>Technology Stack</h2>
+<ul>
+  <li><strong>Framework:</strong> Laravel 12 (PHP 8.2+)</li>
+  <li><strong>Frontend:</strong> Blade Templates, Tailwind CSS, Bootstrap</li>
+  <li><strong>Authentication:</strong> Laravel Jetstream with Livewire</li>
+  <li><strong>Database:</strong> MySQL</li>
+  <li><strong>Mailing:</strong> SMTP Protocol</li>
+  <li><strong>File Storage:</strong> Laravel Storage with symbolic linking</li>
+</ul>
+
+<hr>
+
+<h2>⚙️ Installation &amp; Setup</h2>
+
+<h3>Clone &amp; Install</h3>
+<pre>
+git clone https://github.com/yourusername/SaFa-Hotel-Management-System.git
+cd safa-hotel
 composer install
-npm install
-```
+npm install && npm run build
+</pre>
 
-### Step 2: Environment Configuration
-```bash
+<h3>Environment Configuration</h3>
+<pre>
 cp .env.example .env
 php artisan key:generate
-```
+</pre>
 
-Update `.env` file with your database credentials:
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=hotel_management
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
+<p>Update the .env file with your database credentials and SMTP email configuration.</p>
 
-MAIL_MAILER=smtp
-MAIL_HOST=your_smtp_host
-MAIL_PORT=587
-MAIL_USERNAME=your_email
-MAIL_PASSWORD=your_password
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=your_email
-```
-
-### Step 3: Database Setup
-```bash
+<h3>Initialize Database &amp; Assets</h3>
+<pre>
 php artisan migrate
 php artisan storage:link
-```
+</pre>
 
-### Step 4: Build Assets
-```bash
-npm run build
-# or for development
-npm run dev
-```
-
-### Step 5: Start the Application
-```bash
+<h3>Launch Application</h3>
+<pre>
 php artisan serve
-```
+</pre>
 
-Access the application at: `http://localhost:8000`
+<hr>
 
-## 👥 User Roles & Access
+<h2>📖 User Documentation</h2>
 
-### Admin User
-- **Create Admin User:** Manually update `usertype` field to 'admin' in users table
-- **Dashboard Access:** `/home` (redirects to admin dashboard)
-- **Full System Control:** Room management, booking approvals, gallery, messages
+<h3>👤 Guest User Guide</h3>
+<ul>
+  <li>Register and log in to access booking features.</li>
+  <li>Browse available rooms and view room details.</li>
+  <li>Select preferred dates and submit booking requests.</li>
+  <li>Track booking status from the user dashboard.</li>
+  <li>Manage account security using profile settings and 2FA.</li>
+</ul>
 
-### Regular User
-- **Public Access:** Browse rooms, view gallery, contact form
-- **Booking:** Authenticated users can book rooms
-- **Dashboard:** View booking history and profile
+<h3>🛡️ Admin Command Center</h3>
+<ul>
+  <li>Manage rooms and room information.</li>
+  <li>Review and manage booking requests.</li>
+  <li>Approve or reject reservations.</li>
+  <li>Send automated booking status emails.</li>
+  <li>Manage gallery images and guest messages.</li>
+</ul>
 
-## 📁 Project Structure
+<hr>
 
-```
-hotel-project/
-├── app/
-│   ├── Http/Controllers/
-│   │   ├── AdminController.php    # Admin dashboard & CRUD operations
-│   │   └── HomeController.php     # Public pages & booking
-│   ├── Models/
-│   │   ├── User.php              # User model with Jetstream traits
-│   │   ├── Room.php              # Room inventory
-│   │   ├── Booking.php           # Reservations
-│   │   ├── Gallary.php           # Image gallery
-│   │   └── Contact.php           # Guest messages
-│   └── Notifications/
-│       └── SendEmailNotification.php
-├── database/migrations/          # Database schema files
-├── public/                       # Static assets & HTML templates
-├── resources/views/
-│   ├── admin/                    # Admin dashboard templates
-│   ├── auth/                     # Jetstream auth pages
-│   ├── home/                     # Public pages (Blade templates)
-│   └── layouts/                  # Main layout files
-├── routes/
-│   └── web.php                   # Application routes
-└── storage/app/public/           # File uploads
-```
+<h2>❓ FAQs</h2>
 
-## 🚀 Key Routes
+<p><strong>How do I become an Admin?</strong><br>
+Manually update the usertype field in the users table from user to admin.
+</p>
 
-| Route | Method | Purpose | Access |
-|-------|--------|---------|--------|
-| `/` | GET | Homepage | Public |
-| `/home` | GET | Dashboard | Authenticated |
-| `/create_room` | GET/POST | Add new room | Admin |
-| `/view_room` | GET | Room management | Admin |
-| `/bookings` | GET | Booking management | Admin |
-| `/room_details/{id}` | GET | Room details | Public |
-| `/book_room/{id}` | POST | Book room | Authenticated |
-| `/contact` | POST | Send message | Public |
+<p><strong>Why are images not displaying?</strong><br>
+Ensure you have run <code>php artisan storage:link</code>.
+</p>
 
-## 📧 Email Notifications
-
-The system sends automated emails for:
-- **Booking Confirmations** (Approved bookings)
-- **Booking Rejections** (Rejected bookings)
-- **Custom Messages** (Admin to guests)
-
-Configure SMTP settings in `.env` for email functionality.
-
-## 🔧 Useful Commands
-
-```bash
-# Clear all caches
-php artisan optimize:clear
-
-# Run migrations
-php artisan migrate
-
-# Create storage symlink
-php artisan storage:link
-
-# List all routes
-php artisan route:list
-
-# Start development server
-php artisan serve
-
-# Build assets for production
-npm run build
-
-# Watch assets for changes
-npm run dev
-```
-
-## 🐛 Troubleshooting
-
-### Common Issues:
-
-**Images not displaying:**
-```bash
-php artisan storage:link
-```
-
-**Permission denied errors:**
-- Ensure proper file permissions on `storage/` and `bootstrap/cache/`
-- Run: `chmod -R 755 storage/ bootstrap/cache/`
-
-**Database connection issues:**
-- Verify `.env` database credentials
-- Ensure MySQL service is running
-
-**Email not sending:**
-- Check SMTP configuration in `.env`
-- Verify mail server credentials
-
-## 📝 Development Notes
-
-- **Admin Creation:** Set `usertype = 'admin'` in users table for admin access
-- **File Uploads:** Images stored in `storage/app/public/` with symlinked access
-- **Date Validation:** System prevents overlapping bookings for approved reservations
-- **Room Types:** Supports Regular, Deluxe, and Luxury categories
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License.
+<p><strong>How does booking validation work?</strong><br>
+The system checks approved bookings to ensure no date overlap occurs.
+</p>
