@@ -50,7 +50,7 @@
 <style>
 /* Reduce banner height */
 .banner-img {
-    max-height: 800px; /* adjust this value as needed */
+    max-height: 780px; /* adjust this value as needed */
     object-fit: cover;
 }
 
