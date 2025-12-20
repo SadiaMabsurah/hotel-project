@@ -16,6 +16,7 @@ use App\Models\Gallary;
 
 use App\Models\Contact;
 
+use App\Notifications\SendEmailNotification;
 
 class AdminController extends Controller
 {
@@ -192,5 +193,35 @@ public function all_messages()
     $messages = Contact::all();
     return view('admin.all_messages', compact('messages'));
 }
+
+public function send_email($id)
+{
+    $message = Contact::find($id);
+    if ($message) {
+        return view('admin.send_email', compact('message'));
+    }
+    return redirect()->back();
 }
 
+//reply user message via email
+public function send_user_email(Request $request, $id)
+{
+    $message = Contact::find($id);
+    if ($message) {
+        $details = [
+    'greeting'    => $request->greeting,
+    'body'        => $request->body,
+    'action_text' => $request->actiontext,
+    'action_url'  => $request->actionurl,
+    'end_part'    => $request->endpart,
+  ];
+
+
+        // Send notification
+        $message->notify(new SendEmailNotification($details));
+
+        return redirect()->back()->with('success', 'Email sent successfully!');
+    }
+    return redirect()->back()->with('error', 'Message not found.');
+}
+}
