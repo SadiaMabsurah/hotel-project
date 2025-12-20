@@ -1,7 +1,7 @@
 <h2>👥 Group Members</h2>
 <ul>
-  <li><strong>Sadia Mabsurah – ID: 232-134-002</strong></li>
-  <li><strong>Fawzia Fardowsi Tahia – ID: 232-134-004</strong></li>
+  <li><strong>Sadia Mabsurah –(https://github.com/SadiaMabsurah)</strong></li>
+  <li><strong>Fawzia Fardowsi Tahia –(https://github.com/Fawziatahia)</strong></li>
 </ul>
 
 <h1 align="center">🏨 SaFa | Laravel Hotel Management System</h1>
