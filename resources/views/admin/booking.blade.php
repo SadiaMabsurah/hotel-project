@@ -5,7 +5,7 @@
     <style type="text/css">
         /* Modern Dashboard Styling */
         .page-content {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            background: linear-gradient(135deg, #0f0f0f 0%, #e4e8ec 100%);
             min-height: 100vh;
         }
 
@@ -18,7 +18,7 @@
         }
 
         .booking-card .card-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #af0731ff 0%, #750404ff 100%);
             padding: 20px 25px;
             border: none;
         }
@@ -91,7 +91,7 @@
             width: 36px;
             height: 36px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #d3083bff 0%, #5c0000ff 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -178,7 +178,7 @@
         .price-tag {
             font-weight: 700;
             color: #2d3748;
-            background: #f0f4f8;
+            background: #bdfab7ff;
             padding: 5px 10px;
             border-radius: 6px;
         }
@@ -267,7 +267,7 @@
 
         /* Contact Info */
         .contact-email {
-            color: #667eea;
+            color: #aa0614ff;
             font-size: 0.8rem;
         }
 
