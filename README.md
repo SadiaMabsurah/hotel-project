@@ -100,7 +100,7 @@ SaFa is a sophisticated, full-stack hospitality solution engineered with Laravel
 <h2>Technology Stack</h2>
 <ul>
   <li><strong>Framework:</strong> Laravel 12 (PHP 8.2+)</li>
-  <li><strong>Frontend:</strong> Blade Templates, Tailwind CSS, Bootstrap</li>
+<li><strong>Frontend:</strong> Blade Templates, CSS3, Bootstrap 5</li>
   <li><strong>Authentication:</strong> Laravel Jetstream with Livewire</li>
   <li><strong>Database:</strong> MySQL</li>
   <li><strong>Mailing:</strong> SMTP Protocol</li>
