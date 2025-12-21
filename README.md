@@ -16,12 +16,14 @@ SaFa is a sophisticated, full-stack hospitality solution engineered with Laravel
 
 <h2>🚀 Key Features</h2>
 
-<h3>🔐 Security &amp; Identity(Laravel Jetstream)</h3>
+<h3>🔐 Security &amp; Identity (Laravel Jetstream)</h3>
 <ul>
   <li><strong>Multi-Role Architecture:</strong> Intelligent automated redirection logic for Admin and Customer workflows.</li>
   <li><strong>Two-Factor Authentication (2FA):</strong> Enhanced account protection via mobile authenticator app integration.</li>
   <li><strong>Session Oversight:</strong> Monitor and remotely terminate active browser sessions across multiple devices.</li>
-  <li><strong>Comprehensive Profile Management:</strong> Update name, email, passwords, and privacy controls from a dedicated portal.</li>
+  <li><strong>Comprehensive Profile Management:</strong> Update name, email, password, and privacy settings from a dedicated portal.</li>
+  <li><strong>Forgot Password Recovery:</strong> Secure password reset workflow via verified email authentication.</li>
+  <li><strong>Account Deletion:</strong> Permanent account removal with confirmation to ensure user control and data privacy.</li>
 </ul>
 
 <h3>🛌 Guest Experience</h3>
