@@ -4,7 +4,7 @@
   <li><strong>Fawzia Fardowsi Tahia – ID: 232-134-004</strong></li>
 </ul>
 
-<h1 align="center">🏨 SaFa | Laravel Hotel Management System</h1>
+<h1 align="left">🏨 SaFa | Laravel Hotel Management System</h1>
 
 <hr>
 
@@ -16,13 +16,12 @@ SaFa is a sophisticated, full-stack hospitality solution engineered with Laravel
 
 <h2>🚀 Key Features</h2>
 
-<h3>🔐 Security &amp; Identity</h3>
+<h3>🔐 Security &amp; Identity(Laravel Jetstream)</h3>
 <ul>
   <li><strong>Multi-Role Architecture:</strong> Intelligent automated redirection logic for Admin and Customer workflows.</li>
   <li><strong>Two-Factor Authentication (2FA):</strong> Enhanced account protection via mobile authenticator app integration.</li>
   <li><strong>Session Oversight:</strong> Monitor and remotely terminate active browser sessions across multiple devices.</li>
   <li><strong>Comprehensive Profile Management:</strong> Update name, email, passwords, and privacy controls from a dedicated portal.</li>
-  <li><strong>Custom Admin Middleware:</strong> Robust route protection ensuring only authorized staff can access the backend.</li>
 </ul>
 
 <h3>🛌 Guest Experience</h3>
@@ -46,6 +45,7 @@ SaFa is a sophisticated, full-stack hospitality solution engineered with Laravel
   <li><strong>Advanced Media Handling:</strong> Upload, display, and delete room and gallery images with automatic file system cleanup.</li>
   <li><strong>Gallery Control:</strong> Admin tools to manage and update homepage visual assets.</li>
   <li><strong>Guest Message Handling:</strong> View and respond to customer inquiries received through the contact form.</li>
+  <li><strong>Custom Admin Middleware:</strong> Robust route protection ensuring only authorized staff can access the backend.</li>
 </ul>
 
 <hr>
