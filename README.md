@@ -1,6 +1,5 @@
 <h2>👥 Group Members</h2>
-<h2 style="font-size: 28px;">👥 Group Members</h2>
-<ul style="font-size: 18px;">
+<ul>
   <li><strong>Sadia Mabsurah – ID: 232-134-002</strong></li>
   <li><strong>Fawzia Fardowsi Tahia – ID: 232-134-004</strong></li>
 </ul>
